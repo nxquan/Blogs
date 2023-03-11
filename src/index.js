@@ -12,20 +12,20 @@ const route = require('./routes');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(
-  express.urlencoded({
-    extended: true,
-  }),
+    express.urlencoded({
+        extended: true,
+    }),
 );
 app.use(express.json());
 
 //template engine
-app.engine('hbs', hbs.engine({ extname: '.hbs' }));
+pp.engine('hbs', hbs.engine({ extname: '.hbs' }));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources', 'views'));
 
-        //define route
-        route(app);
+//define route
+route(app);
 
-            app.listen(port, () => {
-            console.log(`Example app listening on port ${port}`);
-            });
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`);
+});

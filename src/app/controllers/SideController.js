@@ -1,15 +1,10 @@
 const Course = require('../model/Course');
+const { convertMultiObject } = require('../../utils/converterMongoToObject');
 
 class SideController {
     // [GET] /
-    async index(req, res) {
-        Course.find({})
-            .then((courses) => {
-                res.json(courses);
-            })
-            .catch((err) => {
-                res.status(400).json({ error: 'Error messsage' });
-            });
+    index(req, res, next) {
+        res.render('home');
     }
 
     // [GET] search page /search

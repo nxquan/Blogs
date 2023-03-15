@@ -1,6 +1,8 @@
 @import 'variable';
+@import 'reset';
+@import 'header';
 
 h1 {
-  color: $primary-color;
-  font-size: 100px;
+    color: $primary-color;
+    font-size: 100px;
 }
